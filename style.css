@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #1c1c1c;
+    color: #f0f0f0;
+    padding: 10px;
+    flex-direction: column;
+}
+
+
+#filme {
+    padding: 10px;
+    border: 2px solid #4caf50;
+    border-radius: 5px;
+    width: 200px;
+    margin-right: 10px;
+    outline: none;
+}
+
+#filme:focus {
+    border-color: #81c784;
+}
+
+#botao {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4caf50;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#botao:hover {
+    background-color: #388e3c;
+}
+
+
+.container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px; 
+}
+
+
+#infos {
+    display: none; 
+    width: 100%;
+    max-width: 400px;
+    padding-left: 24px;
+    text-align: center;
+    color: #f0f0f0;
+}
+
+
+#infos.mostrar {
+    display: block; 
+    background-color: #2e2e2e;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+#infos span {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #4caf50;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+#infos p {
+    margin: 10px 0;
+    line-height: 1.5;
+}
+
+#infos p:first-child {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+
+#infos p {
+    opacity: 0;
+    animation: fadeIn 0.5s ease forwards;
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    #filme {
+        width: 150px;
+    }
+
+    #infos {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 20px;
+    }
+
+    #filme, #botao {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    #infos {
+        padding: 15px;
+    }
+}
