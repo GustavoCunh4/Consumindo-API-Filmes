@@ -7,7 +7,7 @@ botao.addEventListener('click', movie);
 
 function movie() {
     infos.innerHTML = '';
-    infos.classList.add('mostrar'); // Adiciona a classe para exibir o estilo ao clicar
+    infos.classList.add('mostrar'); 
 
     const filmeNome = document.createElement('span');
     filmeNome.innerHTML = filme.value;
